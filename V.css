@@ -220,53 +220,19 @@ span.toggle-btn.ion-android-funnel:hover{
   transform: scale(1);
 }
 
-.filter-btn.open a:nth-child(1), .filter-btn.open .panelTool:nth-child(1) {
-  transform: translate(32px, -55px);
-}
+.filter-btn.open .panelTool:nth-child(1) {   transform: translate(31px, -55px); }
+.filter-btn.open .panelTool:nth-child(2) {   transform: translate(6px, -63px); }
+.filter-btn.open .panelTool:nth-child(3) {   transform: translate(-20px, -60px); }
+.filter-btn.open .panelTool:nth-child(4) {   transform: translate(-43px, -47px); }
+.filter-btn.open .panelTool:nth-child(5) {   transform: translate(-58px, -26px); }
+.filter-btn.open .panelTool:nth-child(6) {   transform: translate(-63px, -1px); }
+.filter-btn.open .panelTool:nth-child(7) {   transform: translate(-58px, 25px); }
+.filter-btn.open .panelTool:nth-child(8) {   transform: translate(-43px, 46px); }
+.filter-btn.open .panelTool:nth-child(9) {   transform: translate(-20px, 59px); }
+.filter-btn.open .panelTool:nth-child(10) {   transform: translate(6px, 62px); }
+.filter-btn.open .panelTool:nth-child(11) {   transform: translate(31px, 54px); }
 
-.filter-btn.open a:nth-child(2), .filter-btn.open .panelTool:nth-child(2) {
-  transform: translate(11px, -62px);
-}
 
-.filter-btn.open a:nth-child(3), .filter-btn.open .panelTool:nth-child(3) {
-  transform: translate(-11px, -62px);
-}
-
-.filter-btn.open a:nth-child(4), .filter-btn.open .panelTool:nth-child(4) {
-  transform: translate(-32px, -55px);
-}
-
-.filter-btn.open a:nth-child(5), .filter-btn.open .panelTool:nth-child(5) {
-  transform: translate(-48px, -40px);
-}
-
-.filter-btn.open a:nth-child(6), .filter-btn.open .panelTool:nth-child(6) {
-  transform: translate(-59px, -22px);
-}
-
-.filter-btn.open a:nth-child(7), .filter-btn.open .panelTool:nth-child(7) {
-  transform: translate(-63px, 0px);
-}
-
-.filter-btn.open a:nth-child(8), .filter-btn.open .panelTool:nth-child(8) {
-  transform: translate(-59px, 22px);
-}
-
-.filter-btn.open a:nth-child(9), .filter-btn.open .panelTool:nth-child(9) {
-  transform: translate(-48px, 40px);
-}
-
-.filter-btn.open a:nth-child(10), .filter-btn.open .panelTool:nth-child(10) {
-  transform: translate(-32px, 55px);
-}
-
-.filter-btn.open a:nth-child(11), .filter-btn.open .panelTool:nth-child(11) {
-  transform: translate(-11px, 62px);
-}
-
-.filter-btn.open a:nth-child(12), .filter-btn.open .panelTool:nth-child(12) {
-  transform: translate(11px, 62px);
-}
 
 .muck-up .bottom {
   background-color: #fff;
