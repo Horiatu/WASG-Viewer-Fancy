@@ -84,7 +84,7 @@ body {
 
 .muck-up > .top {
   position: relative;
-  min-height: 140px;
+  min-height: 130px;
   padding: 15px;
   color: #fff;
 }
@@ -165,7 +165,7 @@ body {
   display: block;
   position: absolute;
   right: 25px;
-  top: -26px;
+  top: -18px;
   text-align: center;
   color: #fff;
   line-height: 40px;
@@ -176,7 +176,7 @@ body {
 span.toggle-btn.ion-android-funnel:hover{
       cursor: pointer;
 }
-.filter-btn a, .filter-btn input[type="button"] {
+.filter-btn a, .filter-btn input {
   position: absolute;
   font-family: 'icomoon' !important;
   padding: 0;
@@ -184,8 +184,8 @@ span.toggle-btn.ion-android-funnel:hover{
   height: 18px;
   line-height: 18px;
   text-align: center;
-  right: 38px;
-  top: -17px;
+  right: 36px;
+  top: -7px;
   display: block;
   color: #fff;
   background-color: transparent;
@@ -201,7 +201,7 @@ span.toggle-btn.ion-android-funnel:hover{
   content: '';
   background-color: #004da8;
   position: absolute;
-  top: -92px;
+  top: -84px;
   right: -40px;
   border-radius: 50%;
   transform: scale(0);
@@ -220,17 +220,25 @@ span.toggle-btn.ion-android-funnel:hover{
   transform: scale(1);
 }
 
-.filter-btn.open .panelTool:nth-child(1) {   transform: translate(31px, -55px); }
-.filter-btn.open .panelTool:nth-child(2) {   transform: translate(6px, -63px); }
-.filter-btn.open .panelTool:nth-child(3) {   transform: translate(-20px, -60px); }
-.filter-btn.open .panelTool:nth-child(4) {   transform: translate(-43px, -47px); }
-.filter-btn.open .panelTool:nth-child(5) {   transform: translate(-58px, -26px); }
-.filter-btn.open .panelTool:nth-child(6) {   transform: translate(-63px, -1px); }
-.filter-btn.open .panelTool:nth-child(7) {   transform: translate(-58px, 25px); }
-.filter-btn.open .panelTool:nth-child(8) {   transform: translate(-43px, 46px); }
-.filter-btn.open .panelTool:nth-child(9) {   transform: translate(-20px, 59px); }
-.filter-btn.open .panelTool:nth-child(10) {   transform: translate(6px, 62px); }
-.filter-btn.open .panelTool:nth-child(11) {   transform: translate(31px, 54px); }
+.filter-btn.open .panelTool:nth-child(1) {   transform: translate(0px, -33px); }
+.filter-btn.open .panelTool:nth-child(2) {   transform: translate(-33px, -1px); }
+.filter-btn.open .panelTool:nth-child(3) {   transform: translate(-1px, 33px); }
+.filter-btn.open .panelTool:nth-child(4) {   transform: translate(33px, 0px); }
+
+.filter-btn.open .panelTool:nth-child(5) {   transform: translate(31px, -55px); }
+.filter-btn.open .panelTool:nth-child(6) {   transform: translate(3px, -63px); }
+.filter-btn.open .panelTool:nth-child(7) {   transform: translate(-25px, -58px); }
+.filter-btn.open .panelTool:nth-child(8) {   transform: translate(-49px, -41px); }
+.filter-btn.open .panelTool:nth-child(9) {   transform: translate(-62px, -15px); }
+.filter-btn.open .panelTool:nth-child(10) {   transform: translate(-62px, 14px); }
+.filter-btn.open .panelTool:nth-child(11) {   transform: translate(-49px, 40px); }
+.filter-btn.open .panelTool:nth-child(12) {   transform: translate(-25px, 57px); }
+.filter-btn.open .panelTool:nth-child(13) {   transform: translate(3px, 62px); }
+.filter-btn.open .panelTool:nth-child(14) {   transform: translate(31px, 54px); }
+.filter-btn.open .panelTool:nth-child(15) {   transform: translate(52px, 34px); }
+.filter-btn.open .panelTool:nth-child(16) {   transform: translate(62px, 7px); }
+
+
 
 
 
