@@ -153,8 +153,6 @@ body {
   position: absolute;
   z-index: 2;
   right: 0;
-  /*width: 40px;
-  height: 40px;*/
   transition: all 0.4s ease-in-out 0s;
 }
 
@@ -276,7 +274,7 @@ span.toggle-btn.ion-android-funnel:hover{
 
 .title small {
   font-size: 10px;
-  color: #888;
+  color: #595959;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -368,6 +366,41 @@ ul li.hang img {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+ul.details{
+    list-style: none;
+    -webkit-margin-before: 0;
+    -webkit-padding-start: 0;
+}
+
+.fontIcon {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    margin-right: 0.5em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+span.details {
+    margin-right: 0.5em;
+    line-height: 1.5em;
+}
+
+img.details{
+    width:16px;
+    height:16px;
+    margin-right: 0.5em;
+    vertical-align: text-bottom;
+}
+
+.navy {
+    color: navy;
 }
 
 [class^="tool-"], [class*=" tool-"] {
