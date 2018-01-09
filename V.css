@@ -21,10 +21,10 @@ html {
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    width: 100% !important;
+    /*width: 100% !important;
     height: 100% !important;
     margin:0;
-    overflow: hidden;
+    overflow: hidden;*/
 }
 
 #mapDiv {
@@ -56,15 +56,13 @@ body {
     width: 30vw;
     height: 95vmin;
     overflow: hidden;
-    background: white;
     position: absolute;
     z-index: 1001;
     right: 0;
-    margin: 1vmin;
+    margin: 5px;
 }
 
 .overlay {
-  background: url(https://raw.githubusercontent.com/arjunamgain/FilterMenu/master/images/header.jpg) no-repeat top /contain;
   position: absolute;
   left: 0;
   top: 0;

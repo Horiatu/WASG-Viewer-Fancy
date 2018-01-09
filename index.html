@@ -2,6 +2,8 @@
 <html lang="en" class="cookie_used_true js pc js">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="description" content="WCAG Tests using ArcGIS JS v4, Calcite Maps and Bootstrap">
   <title>WCAG Fancy</title>
 
  <!--  <link href="https://fonts.googleapis.com/css?family=Lato:400,900,400italic,700italic" rel="stylesheet"> -->
@@ -11,26 +13,86 @@
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+<!-- Calcite Maps Bootstrap -->
+  <link rel="stylesheet" href="https://esri.github.io/calcite-maps/dist/css/calcite-maps-bootstrap.min-v0.6.css">
+
+  <!-- Calcite Maps -->
+  <link rel="stylesheet" href="https://esri.github.io/calcite-maps/dist/css/calcite-maps-arcgis-4.x.min-v0.6.css">
+
+  <!-- ArcGIS JS 4 -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+  </style>
+
 <script type="text/javascript" src="V.js"></script>
 
 
 <link rel="stylesheet" href="V.css"/>
 
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
    crossorigin=""/>
 
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-   crossorigin=""></script>
+   crossorigin=""></script> -->
 
-<script type="text/javascript" src="L.js"></script>
+<!-- <script type="text/javascript" src="L.js"></script> -->
 
 </head>
 
 
-<body>
+<body  class="calcite-maps calcite-nav-top">
+
+    <nav class="navbar calcite-navbar navbar-fixed-top calcite-text-light calcite-bg-dark">
+    <!-- Menu -->
+    <div class="dropdown calcite-dropdown calcite-text-dark calcite-bg-light" role="presentation">
+      <a class="dropdown-toggle" role="menubutton" aria-haspopup="true" aria-expanded="false" tabindex="0">
+        <div class="calcite-dropdown-toggle">
+          <span class="sr-only">Toggle dropdown menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a role="menuitem" tabindex="0" href="#" data-target="#panelBasemaps" aria-haspopup="true"><span class="glyphicon glyphicon-th-large"></span> Basemaps</a></li>
+        <li><a role="menuitem" tabindex="0" href="#" data-target="#panelLegend" aria-haspopup="true"><span class="glyphicon glyphicon-list-alt"></span> Legend</a></li>
+        <li><a role="menuitem" tabindex="0" href="#" data-target="#panelLayers" aria-haspopup="true"><span class="glyphicon glyphicon-list"></span> Layers</a></li>
+        <li><a role="menuitem" tabindex="0" href="#" data-target="#panelPrint" aria-haspopup="true"><span class="glyphicon glyphicon-print"></span> Print</a></li>
+        <li><a role="menuitem" tabindex="0" href="#" id="calciteToggleNavbar" aria-haspopup="true"><span class="glyphicon glyphicon-fullscreen"></span> Full Map</a></li>
+      </ul>
+    </div>
+    <!-- Title -->
+    <div class="calcite-title calcite-overflow-hidden">
+      <span class="calcite-title-main">Calcite Maps</span>
+      <span class="calcite-title-divider hidden-xs"></span>
+      <span class="calcite-title-sub hidden-xs">A Bootstrap theme for building modern map apps</span>
+    </div>
+    <!-- Nav -->
+    <ul class="nav navbar-nav calcite-nav">
+      <li>
+        <div class="calcite-navbar-search calcite-search-expander">
+          <div id="searchWidgetDiv"></div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="calcite-map calcite-map-absolute">
+    <div id="mapViewDiv"></div>
+  </div>
+
+
 
 <div id="mainPanel" class="muck-up">
   <div class="overlay"></div>
@@ -93,8 +155,78 @@
     </ul>
   </div>
 </div>
-<div id="mapDiv"></div>
+<!-- <div id="mapDiv"></div> -->
 <span id="panelExpand" class="icon-arrow-left2"></span>
+
+  <script type="text/javascript">
+    var dojoConfig = {
+      packages: [{
+        name: "bootstrap",
+        location: "https://esri.github.io/calcite-maps/dist/vendor/dojo-bootstrap"
+      },
+      {
+        name: "calcite-maps",
+        location: "https://esri.github.io/calcite-maps/dist/js/dojo"
+      }]
+    };
+  </script>
+
+  <!-- ArcGIS JS 4 -->
+  <script src="https://js.arcgis.com/4.6/"></script>
+
+    <script>
+    
+    require([
+      // ArcGIS
+      "esri/WebMap",
+      "esri/views/MapView",
+
+      // Widgets
+      "esri/widgets/BasemapGallery",
+      "esri/widgets/Search",
+      "esri/widgets/Legend",
+      "esri/widgets/LayerList",
+      "esri/widgets/Print",
+      "esri/widgets/BasemapToggle",
+      "esri/widgets/ScaleBar",
+
+      // Bootstrap
+      "bootstrap/Collapse",
+      "bootstrap/Dropdown",
+
+      // Calcite Maps
+      "calcite-maps/calcitemaps-v0.5",
+      // Calcite Maps ArcGIS Support
+      "calcite-maps/calcitemaps-arcgis-support-v0.5",
+
+      "dojo/domReady!"
+    ], function(WebMap, MapView, Basemaps, Search, Legend, LayerList, Print, BasemapToggle, ScaleBar, Collapse, Dropdown, CalciteMaps, CalciteMapArcGISSupport) {
+
+      /******************************************************************
+       *
+       * Create the map, view and widgets
+       * 
+       ******************************************************************/
+
+      // Map
+      var map = new WebMap({
+        portalItem: {
+          id: "9f91f911f58540ceaac0300c55e18fbb"
+        }
+      });
+      
+      // View
+      var mapView = new MapView({
+        container: "mapViewDiv",
+        map: map,
+        padding: {
+          top: 50,
+          bottom: 0
+        }
+      });
+
+      });
+    </script>
 
 
 </body>
