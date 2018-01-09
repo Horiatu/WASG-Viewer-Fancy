@@ -57,6 +57,7 @@
         <li><a role="menuitem" tabindex="0" href="#" data-target="#panelLegend" aria-haspopup="true"><span class="glyphicon glyphicon-list-alt"></span> Legend</a></li>
         <li><a role="menuitem" tabindex="0" href="#" data-target="#panelLayers" aria-haspopup="true"><span class="glyphicon glyphicon-list"></span> Layers</a></li>
         <li><a role="menuitem" tabindex="0" href="#" data-target="#panelPrint" aria-haspopup="true"><span class="glyphicon glyphicon-print"></span> Print</a></li>
+        <li><a role="menuitem" tabindex="0" href="#" data-target="#panelTest" aria-haspopup="true"><span class="glyphicon glyphicon-star"></span> Test</a></li>
         <li><a role="menuitem" tabindex="0" href="#" id="calciteToggleNavbar" aria-haspopup="true"><span class="glyphicon glyphicon-fullscreen"></span> Full Map</a></li>
       </ul>
     </div>
@@ -146,6 +147,20 @@
       <div id="collapsePrint" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingPrint">
         <div class="panel-body">
            <div id="printDiv"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panelTest" class="panel collapse">
+      <div id="headingTest" class="panel-heading">
+        <div class="panel-title">
+          <a class="panel-toggle collapsed" role="button" data-toggle="collapse" href="#collapseTest" aria-expanded="false" aria-controls="collapseTest"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="panel-label">Test</span></a> 
+          <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelTest"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>
+        </div>
+      </div>
+      <div id="collapseTest" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTest">
+        <div class="panel-body">
+           <!-- <div id="printDiv"></div> -->
         </div>
       </div>
     </div>
