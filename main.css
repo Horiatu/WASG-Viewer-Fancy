@@ -27,6 +27,10 @@ body {
     overflow: hidden;*/
 }
 
+.panel-body {
+      overflow: hidden;
+}
+
 #mapDiv {
     width: 100% !important;
     height: 100% !important;
@@ -64,6 +68,7 @@ body {
 }
 
 .overlay {
+  /*background: url(https://raw.githubusercontent.com/arjunamgain/FilterMenu/master/images/header.jpg) no-repeat top /contain;*/
   position: absolute;
   left: 0;
   top: 0;
@@ -371,6 +376,8 @@ ul.details{
     list-style: none;
     -webkit-margin-before: 0;
     -webkit-padding-start: 0;
+    overflow-y: auto;
+    height: 200px;
 }
 
 .fontIcon {
