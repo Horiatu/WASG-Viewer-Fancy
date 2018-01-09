@@ -105,14 +105,14 @@
 
     <!-- Panel - Legend -->
 
-    <div id="panelLegend" class="panel collapse in">
+    <div id="panelLegend" class="panel collapse">
       <div id="headingLegend" class="panel-heading" role="tab">
         <div class="panel-title">
           <a class="panel-toggle" role="button" data-toggle="collapse" href="#collapseLegend" aria-expanded="false" aria-controls="collapseLegend"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span class="panel-label">Legend</span></a> 
           <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelLegend"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a> 
         </div>
       </div>
-      <div id="collapseLegend" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingLegend">
+      <div id="collapseLegend" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLegend">
         <div class="panel-body">            
           <div id="legendDiv"></div>
         </div>
@@ -151,26 +151,18 @@
       </div>
     </div>
 
-    <div id="panelTest" class="panel collapse">
+    <div id="panelTest" class="panel in">
       <div id="headingTest" class="panel-heading">
         <div class="panel-title">
           <a class="panel-toggle collapsed" role="button" data-toggle="collapse" href="#collapseTest" aria-expanded="false" aria-controls="collapseTest"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="panel-label">Test</span></a> 
           <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelTest"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>
         </div>
       </div>
-      <div id="collapseTest" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTest">
+      <div id="collapseTest" class="panel-collapse in" role="tabpanel" aria-labelledby="headingTest">
         <div class="panel-body">
            <!-- <div id="printDiv"></div> -->
-        </div>
-      </div>
-    </div>
 
-  </div>
-
-  <!-- /.calcite-panels -->
-
-
-<div id="mainPanel" class="muck-up">
+<!-- <div id="mainPanel" class="muck-up"> -->
   <div class="overlay"></div>
   <div class="top">
     <div class="nav">
@@ -208,31 +200,42 @@
   <div class="clearfix"></div>
   <div class="bottom">
     <div class="title">
-      <h3 class="navy">Help</h3>
+      <h3>Menu</h3>
       <small>Tool Buttons</small>
     </div>
     <ul class="details">
-      <li tabindex=0><span class="details fontIcon navy">&#xe905;</span><span>Details</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe986;</span><span>Search</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xea09;</span><span>Help</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe905;</span><span>Details</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe986;</span><span>Search</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xea09;</span><span>Help</span></li>
       
       <li tabindex=0><img class="details" src="images/flag.CA.22.png" alt=""><span>Language</span></li>
 
-      <li tabindex=0><span class="details fontIcon navy">&#xe9ca;</span><span>Overview map</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe916;</span><span>Layer Manager</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe90f;</span><span>Filters</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xea0c;</span><span>Info Panel</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe9cc;</span><span>Reverse Geocode</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe93d;</span><span>Feature List</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe91e;</span><span>Measure</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe931;</span><span>Share</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe902;</span><span>Bookmarks</span></li>
-      <li tabindex=0><span class="details fontIcon navy">&#xe929;</span><span>Print</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe9ca;</span><span>Overview map</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe916;</span><span>Layer Manager</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe90f;</span><span>Filters</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xea0c;</span><span>Info Panel</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe9cc;</span><span>Reverse Geocode</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe93d;</span><span>Feature List</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe91e;</span><span>Measure</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe931;</span><span>Share</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe902;</span><span>Bookmarks</span></li>
+      <li tabindex=0><span class="details fontIcon">&#xe929;</span><span>Print</span></li>
     </ul>
   </div>
-</div>
+<!-- </div> -->
 <!-- <div id="mapDiv"></div> -->
 <span id="panelExpand" class="icon-arrow-left2"></span>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- /.calcite-panels -->
+
+
+
 
   <script type="text/javascript">
     var dojoConfig = {
