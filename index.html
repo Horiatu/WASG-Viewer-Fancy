@@ -57,7 +57,8 @@
         <li><a role="menuitem" tabindex="0" href="#" data-target="#panelLegend" aria-haspopup="true"><span class="glyphicon glyphicon-list-alt"></span> Legend</a></li>
         <li><a role="menuitem" tabindex="0" href="#" data-target="#panelLayers" aria-haspopup="true"><span class="glyphicon glyphicon-list"></span> Layers</a></li>
         <li><a role="menuitem" tabindex="0" href="#" data-target="#panelPrint" aria-haspopup="true"><span class="glyphicon glyphicon-print"></span> Print</a></li>
-        <li><a role="menuitem" tabindex="0" href="#" data-target="#panelTest" aria-haspopup="true"><span class="glyphicon glyphicon-star"></span> Test</a></li>
+        <li><a role="menuitem" tabindex="0" href="#" data-target="#panelTest" aria-haspopup="true">
+          <span class="glyphicon glyphicon-star"></span> Menu</a></li>
         <li><a role="menuitem" tabindex="0" href="#" id="calciteToggleNavbar" aria-haspopup="true"><span class="glyphicon glyphicon-fullscreen"></span> Full Map</a></li>
       </ul>
     </div>
@@ -154,8 +155,10 @@
     <div id="panelTest" class="panel in">
       <div id="headingTest" class="panel-heading">
         <div class="panel-title">
-          <a class="panel-toggle collapsed" role="button" data-toggle="collapse" href="#collapseTest" aria-expanded="false" aria-controls="collapseTest"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="panel-label">Test</span></a> 
-          <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelTest"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>
+          <a class="panel-toggle collapsed" role="button" data-toggle="collapse" href="#collapseTest" aria-expanded="true" aria-controls="collapseTest">
+            <span class="fontIcon" class="fontIcon">&#xe9bd;</span>
+            <span class="panel-label">Menu</span></a> 
+          <!-- <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelTest"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a> -->
         </div>
       </div>
       <div id="collapseTest" class="panel-collapse in" role="tabpanel" aria-labelledby="headingTest">
@@ -168,45 +171,29 @@
     <!-- <div class="nav">
       <span id="panelCollapse" class="icon-arrow-right2"></span>
     </div> -->
-    <div class="user-profile">
-      <img src="images/logo.png">
-      <div class="user-details">
-        <h1>Menu</h1>
-        <h2>Tool Buttons</h2>
-      </div>
-    <!-- <div class="filter-btn">
-      <input type="button" value="&#xe905;" title="Details" alt="Details" class="panelTool">
-      <input type="button" value="&#xe986;" title="Search" alt="Search" class="panelTool">
-      <input type="image" src="images/flag.CA.22.png" title="Language" alt="Language" class="panelTool">
-      <input type="button" value="&#xea09;" title="Help" alt="Help" class="panelTool">
-
-      <input type="button" value="&#xe9ca;" title="Overview map" alt="Overview map" class="panelTool">
-      <input type="button" value="&#xe916;" title="Layer Manager" alt="Layer Manager" class="panelTool">
-      <input type="button" value="&#xe90f;" title="Filters" alt="Filters" class="panelTool">
-      <input type="button" value="&#xea0c;" title="Info Panel" alt="Info Panel" class="panelTool">
-      <input type="button" value="&#xe9cc;" title="Reverse Geocode" alt="Reverse Geocode" class="panelTool">
-      <input type="button" value="&#xe93d;" title="Feature List" alt="Feature List" class="panelTool">
-      <input type="button" value="&#xe91e;" title="Measure" alt="Measure" class="panelTool">
-      <input type="button" value="&#xe931;" title="Share" alt="Share" class="panelTool">
-      <input type="button" value="&#xe902;" title="Bookmarks" alt="Bookmarks" class="panelTool">
-      <input type="button" value="&#xe929;" title="Print" alt="Print" class="panelTool">
-      
-      <span class="toggle-btn ion-android-funnel icon-menu">
-      </span>
-    </div> -->
-  </div>
+    <!-- <div class="user-profile"> -->
+      <table role="prezentation" class="contentTitle">
+        <tr>
+          <td rowspan="2">
+          <img src="images/logo.png">
+        </td>
+        <td style="width:100%;">
+          <h1>WCAG Demo</h1>
+        </td>
+        <tr><td>
+          <h2>Responsive Design</h2>
+        </td></tr>
+        </tr>
+      </table>
+   <!--  </div> -->
   <div class="clearfix"></div>
   </div>
   <div class="clearfix"></div>
   <div class="bottom">
-    <!-- <div class="title">
-      <h3>Menu</h3>
-      <small>Tool Buttons</small>
-    </div> -->
     <ul class="details">
       <li tabindex=0><span class="details fontIcon">&#xe905;</span><span>Details</span></li>
       <li tabindex=0><span class="details fontIcon">&#xe986;</span><span>Search</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xea09;</span><span>Help</span></li>
+      <!-- <li tabindex=0><span class="details fontIcon">&#xea09;</span><span>Help</span></li> -->
       
       <li tabindex=0><img class="details" src="images/flag.CA.22.png" alt=""><span>Language</span></li>
 
@@ -223,8 +210,8 @@
     </ul>
   </div>
 <!-- </div> -->
-<!-- <div id="mapDiv"></div> -->
-<span id="panelExpand" class="icon-arrow-left2"></span>
+
+<!-- <span id="panelExpand" class="icon-arrow-left2"></span> -->
 
         </div>
       </div>

@@ -31,20 +31,6 @@ body {
       overflow: hidden;
 }
 
-#mapDiv {
-    width: 100% !important;
-    height: 100% !important;
-/*    width: calc(100% - 0px) !important;
-    height: calc(100% - 0px) !important;*/
-    /*background-color: yellow;*/
-    position:absolute;
-}
-*,
-:after,
-:before {
-  box-sizing: border-box
-}
-
 .clearfix:after,
 .clearfix:before {
   /*content: '';*/
@@ -56,7 +42,7 @@ body {
   display: block
 }
 
-.muck-up {
+/*.muck-up {
     width: 30vw;
     height: 95vmin;
     overflow: hidden;
@@ -64,26 +50,6 @@ body {
     z-index: 1001;
     right: 0;
     margin: 5px;
-    /*display: none;*/
-}
-
-.overlay {
-  /*background: url(https://raw.githubusercontent.com/arjunamgain/FilterMenu/master/images/header.jpg) no-repeat top /contain;*/
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.overlay:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  /*background: rgba(71, 32, 84, 0.5);*/
 }
 
 .muck-up > .top {
@@ -91,14 +57,14 @@ body {
   min-height: 130px;
   padding: 15px;
   color: #fff;
-}
+}*/
 
-.top .nav span {
+/*.top .nav span {
   float: right;
   display: block;
-}
+}*/
 
-.nav p {
+/*.nav p {
   margin-top: 2px;
   display: inline-block;
   float: left;
@@ -108,165 +74,39 @@ body {
 .ion-android-menu {
   font-size: 24px;
   margin-right: 17px;
-}
+}*/
 
-.nav .ion-ios-more-outline {
+/*.nav .ion-ios-more-outline {
   font-size: 38px;
   float: right !important;
+}*/
+
+.contentTitle {
+  margin-bottom: 20px;
+  width:100%;
 }
 
-.user-profile {
-  /*margin-top: 20px;*/
-}
-
-.user-profile img {
-  /*height: 45px;*/
+.contentTitle img {
   width: 45px;
-  /*border-radius: 50%;*/
-  float: left;
-  margin-right: 8px;
+  vertical-align: top;
 }
 
-.user-details p {
-  font-size: 11px;
-}
-
-.user-details {
-  /*float: left;
-  margin-top: -30px;
-  vertical-align: bottom;*/
-  margin-bottom: 30px;
-}
-
-.user-details h1 {
+.contentTitle h1 {
     font-size: 18px;
     -webkit-margin-before: 0;
-    -webkit-margin-after: 0.1em;
+    -webkit-margin-after: 0;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
 }
 
-.user-details h2 {
+.contentTitle h2 {
     font-size: 16px;
     -webkit-margin-before: 0;
-    -webkit-margin-after: 0.1em;
+    -webkit-margin-after: 0;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
 }
 
-.filter-btn {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  transition: all 0.4s ease-in-out 0s;
-}
-
-.filter-btn span {
-  width: 40px;
-  height: 40px;
-  background: #004da8;
-  display: block;
-  position: absolute;
-  right: 25px;
-  top: -18px;
-  text-align: center;
-  color: #fff;
-  line-height: 40px;
-  border-radius: 50%;
-  font-size: 13px;
-  z-index: 999;
-}
-span.toggle-btn.ion-android-funnel:hover{
-      cursor: pointer;
-}
-.filter-btn a, .filter-btn input {
-  position: absolute;
-  font-family: 'icomoon' !important;
-  padding: 0;
-  width: 18px;
-  height: 18px;
-  line-height: 18px;
-  text-align: center;
-  right: 36px;
-  top: -7px;
-  display: block;
-  color: #fff;
-  background-color: transparent;
-  z-index: 99;
-  border-width: 0;
-  font-size: 16px;
-  transition: all .4s cubic-bezier(.68, 1, .265, 1)
-}
-
-.filter-btn:after {
-  height: 170px;
-  width: 170px;
-  content: '';
-  background-color: #004da8;
-  position: absolute;
-  top: -84px;
-  right: -40px;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.filter-btn.open span.toggle-btn.ion-android-funnel {
-  background-color: #00316b;
-}
-
-.filter-btn.open .ion-android-funnel:before {
-  content: "\ea0f";
-}
-
-.open:after {
-  transform: scale(1);
-}
-
-.filter-btn.open .panelTool:nth-child(1) {   transform: translate(0px, -33px); }
-.filter-btn.open .panelTool:nth-child(2) {   transform: translate(-33px, -1px); }
-.filter-btn.open .panelTool:nth-child(3) {   transform: translate(-1px, 33px); }
-.filter-btn.open .panelTool:nth-child(4) {   transform: translate(33px, 0px); }
-
-.filter-btn.open .panelTool:nth-child(5) {   transform: translate(31px, -55px); }
-.filter-btn.open .panelTool:nth-child(6) {   transform: translate(3px, -63px); }
-.filter-btn.open .panelTool:nth-child(7) {   transform: translate(-25px, -58px); }
-.filter-btn.open .panelTool:nth-child(8) {   transform: translate(-49px, -41px); }
-.filter-btn.open .panelTool:nth-child(9) {   transform: translate(-62px, -15px); }
-.filter-btn.open .panelTool:nth-child(10) {   transform: translate(-62px, 14px); }
-.filter-btn.open .panelTool:nth-child(11) {   transform: translate(-49px, 40px); }
-.filter-btn.open .panelTool:nth-child(12) {   transform: translate(-25px, 57px); }
-.filter-btn.open .panelTool:nth-child(13) {   transform: translate(3px, 62px); }
-.filter-btn.open .panelTool:nth-child(14) {   transform: translate(31px, 54px); }
-.filter-btn.open .panelTool:nth-child(15) {   transform: translate(52px, 34px); }
-.filter-btn.open .panelTool:nth-child(16) {   transform: translate(62px, 7px); }
-
-
-
-
-
-.muck-up .bottom {
-  background-color: #fff;
-  min-height: 303px;
-  z-index: 1;
-  padding: 15px;
-  position: relative;
-  color: black;
-  padding-top: 0px;
-}
-
-.bottom:after {
-  content: '';
-  position: absolute;
-  top: 84px;
-  /*background: #fff;*/
-  left: -22px;
-  right: 0;
-  height: 100px;
-  transform: rotate(10deg);
-  /*width: 337px;*/
-  /*z-index: -1;*/
-}
 
 .bottom .title {
   margin-bottom: 20px;
@@ -283,74 +123,6 @@ span.toggle-btn.ion-android-funnel:hover{
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
-ul.tasks .task-title {
-  font-size: 13px;
-  display: inline-block;
-}
-
-ul.tasks .task-time {
-  float: right;
-  font-size: 10px;
-  color: #888;
-}
-
-ul.tasks .task-cat {
-  font-size: 10px;
-  display: block;
-  color: #888;
-}
-
-ul.tasks li {
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 8;
-}
-
-ul.tasks li:after {
-  content: '';
-  position: absolute;
-  left: -18px;
-  top: 8px;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-}
-
-ul.tasks li.red:after {
-  background: #FF3163;
-}
-
-ul.tasks li.green:after {
-  background: #54D6C7;
-}
-
-ul.tasks li.yellow:after {
-  background: #EAB429;
-}
-
-ul.tasks::after {
-  content: '';
-  position: absolute;
-  height: 400px;
-  width: 1px;
-  background: #eee;
-  left: 20px;
-  top: -68px;
-}
-
-ul li.hang {
-  margin-bottom: 48px;
-}
-
-ul li.hang img {
-  float: left;
-  height: 20ox;
-  width: 20px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
 
 .panelTool input {
   width: 18px;
@@ -377,13 +149,15 @@ ul.details{
     list-style: none;
     -webkit-margin-before: 0;
     -webkit-padding-start: 0;
-    -webkit-margin-after: 0;
+     -webkit-margin-after: 0;
+    -webkit-margin-end: -15px;
     overflow-y: auto;
     height: 275px;
 }
 
 ul.details li {
-  width:90%;
+  margin-right: 4px;
+  padding:4px;
 }
 
 .fontIcon {
@@ -393,10 +167,10 @@ ul.details li {
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    margin-right: 0.5em;
+    /*margin-right: 0.5em;*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 span.details {
