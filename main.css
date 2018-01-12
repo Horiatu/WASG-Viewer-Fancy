@@ -20,15 +20,13 @@ html {
 }
 
 body {
-    /*font-family: 'Roboto Condensed', sans-serif;*/
-    /*width: 100% !important;
-    height: 100% !important;
-    margin:0;
-    overflow: hidden;*/
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .panel-body {
-      overflow: hidden;
+  overflow: hidden;
 }
 
 .clearfix:after,
@@ -41,45 +39,6 @@ body {
   clear: both;
   display: block
 }
-
-/*.muck-up {
-    width: 30vw;
-    height: 95vmin;
-    overflow: hidden;
-    position: absolute;
-    z-index: 1001;
-    right: 0;
-    margin: 5px;
-}
-
-.muck-up > .top {
-  position: relative;
-  min-height: 130px;
-  padding: 15px;
-  color: #fff;
-}*/
-
-/*.top .nav span {
-  float: right;
-  display: block;
-}*/
-
-/*.nav p {
-  margin-top: 2px;
-  display: inline-block;
-  float: left;
-  vertical-align: bottom;
-}
-
-.ion-android-menu {
-  font-size: 24px;
-  margin-right: 17px;
-}*/
-
-/*.nav .ion-ios-more-outline {
-  font-size: 38px;
-  float: right !important;
-}*/
 
 .contentTitle {
   margin-bottom: 20px;
