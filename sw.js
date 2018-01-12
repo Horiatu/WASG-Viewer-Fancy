@@ -23,21 +23,17 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  // console.log('request: ', event.request.url);
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
-        // console.log('match: ', event.request.url);
         // Cache hit - return response
         if (response) {
-          // console.log('response');
           return response;
         }
-        // return fetch(event.request);
+
         var fetchRequest = event.request.clone();
 
-        return fetch(fetchRequest).then(
-          function(response) {
+        return fetch(fetchRequest).then(function(response) {
             // Check if we received a valid response
             if(!response || response.status !== 200 || response.type !== 'basic') {
               return response;

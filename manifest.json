@@ -3,7 +3,7 @@
   "name": "WCAG Fancy Viewer",
   "icons": [
     {
-      "src": "images/shortcutsicons/accessibility.192.png",
+      "src": "./images/shortcutsicons/accessibility.192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
