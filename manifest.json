@@ -1,0 +1,12 @@
+{
+  "short_name": "WCAG",
+  "name": "WCAG Fancy Viewer",
+  "icons": [
+    {
+      "src": "images/shortcutsicons/accessibility.192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+  ],
+  "start_url": "index.html?launcher=true"
+}
