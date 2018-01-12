@@ -1,8 +1,8 @@
 var CACHE_NAME = 'WCAG-Fancy-cache-v1';
 var urlsToCache = [
   // '/',
-  'main.css',
-  'main.js',
+  './main.css',
+  './main.js',
   // '/icomoon/fonts/icomoon.eot',
   // '/icomoon/fonts/icomoon.svg', 
   // '/icomoon/fonts/icomoon.ttf',
