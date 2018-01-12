@@ -1,5 +1,3 @@
-console.log('sw');
-
 var CACHE_NAME = 'WCAG-Fancy-cache-v1';
 var urlsToCache = [
   '/',
