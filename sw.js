@@ -1,8 +1,8 @@
 var CACHE_NAME = 'WCAG-Fancy-cache-v1';
 var urlsToCache = [
   // '/',
-  './main.css',
-  './main.js',
+  'https://horiatu.github.io/WASG-Viewer-Fancy/main.css',
+  'https://horiatu.github.io/WASG-Viewer-Fancy/main.js',
   // '/icomoon/fonts/icomoon.eot',
   // '/icomoon/fonts/icomoon.svg', 
   // '/icomoon/fonts/icomoon.ttf',
