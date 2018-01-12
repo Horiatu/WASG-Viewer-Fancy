@@ -18,6 +18,9 @@
 
 
   <meta charset="UTF-8">
+  <meta name="keywords" content="accessibility">
+  <meta name="mobile-web-app-capable" content="yes">
+
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,user-scalable=yes">
   <meta name="description" content="WCAG Tests using ArcGIS JS v4, Calcite Maps and Bootstrap">
   <title>WCAG Fancy</title>
@@ -52,7 +55,16 @@
 </head>
 
 
-<body  class="calcite-maps calcite-nav-top">
+<body class="calcite-maps calcite-nav-top app-loading">
+
+    <div class="loading-indicator" role="presentation">
+      <div class="loading-message" id="loading_message"></div>
+      <div id='loadingTitle'><h1>Accessible Viewer</h1></div>
+      <div id="splashScreen" role="presentation">
+        <div id="splashScreenContent"></div>
+      </div>
+    </div>
+
 
     <nav class="navbar calcite-navbar navbar-fixed-top calcite-text-light calcite-bg-dark">
     <!-- Menu -->
@@ -254,6 +266,7 @@
   <script>
   
     require([
+      "dojo/dom-class", 
       // ArcGIS
       "esri/WebMap",
       "esri/views/MapView",
@@ -277,7 +290,11 @@
       "calcite-maps/calcitemaps-arcgis-support-v0.5",
 
       "dojo/domReady!"
-    ], function(WebMap, MapView, Basemaps, Search, Legend, LayerList, Print, BasemapToggle, ScaleBar, Collapse, Dropdown, CalciteMaps, CalciteMapArcGISSupport) {
+    ], function(
+      domClass, 
+      WebMap, MapView, Basemaps, Search, Legend, LayerList, 
+      Print, BasemapToggle, ScaleBar, Collapse, Dropdown, 
+      CalciteMaps, CalciteMapArcGISSupport) {
 
       /******************************************************************
        *
@@ -352,6 +369,7 @@
       });
       mapView.ui.add(scaleBar, "bottom-left");
 
+      domClass.remove(document.body, "app-loading");
   });
 </script>
 

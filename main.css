@@ -180,3 +180,39 @@ img.details{
     right: 3.5vmin;
     top: 3.5vmin;
 }
+
+.app-loading .loading-indicator {
+    background-position: center center;
+    background-image: url(./images/reload3.gif);
+    background-repeat: no-repeat;
+}
+
+.loading-indicator {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: #fff; 
+}
+
+.app-loading .loading-indicator, 
+.app-error .loading-indicator {
+  display: block; 
+}
+
+.app-error .loading-message {
+  background-position: top center;
+  background-image: url(./images/error.png);
+  background-repeat: no-repeat;
+  padding-top: 60px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 75%;
+  left: 0;
+  text-align: center; 
+}
