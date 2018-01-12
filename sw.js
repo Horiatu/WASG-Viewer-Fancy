@@ -3,10 +3,10 @@ var urlsToCache = [
   '/',
   '/main.css',
   '/main.js',
-  '/icomoon/fonts/icomoon.eot',
-  '/icomoon/fonts/icomoon.svg',
-  '/icomoon/fonts/icomoon.ttf',
-  '/icomoon/fonts/icomoon.woff'
+  // '/icomoon/fonts/icomoon.eot',
+  // '/icomoon/fonts/icomoon.svg', 
+  // '/icomoon/fonts/icomoon.ttf',
+  // '/icomoon/fonts/icomoon.woff'
 ];
 
 self.addEventListener('install', function(event) {
