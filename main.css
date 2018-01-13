@@ -185,6 +185,7 @@ img.details{
     background-position: center center;
     background-image: url(./images/reload3.gif);
     background-repeat: no-repeat;
+    background-size: 50vmin;
 }
 
 .loading-indicator {
@@ -215,4 +216,14 @@ img.details{
   top: 75%;
   left: 0;
   text-align: center; 
+}
+
+#loadingTitle {
+  width: 100%;
+  position: absolute;
+  /*z-index: 2;*/
+  top: 45%;
+  left: 0;
+  text-align: center; 
+  /*display: none;*/
 }
