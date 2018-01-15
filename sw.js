@@ -16,9 +16,9 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
-        caches.delete(CACHE_NAME).then(function() {
+        // caches.delete(CACHE_NAME).then(function() {
           console.log('Opened cache: ', CACHE_NAME, cache.keys());
-        });
+        // });
         return cache.addAll(urlsToCache);
       })
   );
