@@ -1,4 +1,4 @@
-var CACHE_NAME = 'WCAG-Fancy-cache-v4';
+var CACHE_NAME = 'WCAG-Fancy-cache-v1';
 var urlsToCache = [
   './',
   './js/main.js',
