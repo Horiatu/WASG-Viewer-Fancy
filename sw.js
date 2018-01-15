@@ -1,14 +1,8 @@
-var CACHE_NAME = 'WCAG-Fancy-cache-v3';
+var CACHE_NAME = 'WCAG-Fancy-cache-v4';
 var urlsToCache = [
   './',
   './js/main.js',
   './css/main.css'
-  // './images/logo.png',
-  // './images/flag.CA.22.png',
-  // './icomoon/fonts/icomoon.eot',
-  // './icomoon/fonts/icomoon.svg', 
-  // './icomoon/fonts/icomoon.ttf',
-  // './icomoon/fonts/icomoon.woff'
 ];
 
 self.addEventListener('install', function(event) {
