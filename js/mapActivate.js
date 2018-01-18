@@ -55,6 +55,7 @@ require([
   // Popup and panel sync
   mapView.then(function(){
     CalciteMapArcGISSupport.setPopupPanelSync(mapView);
+    // domClass.remove(document.body, "app-loading");
   });
 
   // Search - add to navbar
@@ -102,5 +103,5 @@ require([
   });
   mapView.ui.add(scaleBar, "bottom-left");
 
-  domClass.remove(document.body, "app-loading");
+  // domClass.remove(document.body, "app-loading");
 });

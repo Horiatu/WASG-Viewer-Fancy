@@ -219,11 +219,14 @@ img.details{
 }
 
 #loadingTitle {
-  width: 100%;
-  position: absolute;
-  /*z-index: 2;*/
-  top: 45%;
-  left: 0;
-  text-align: center; 
-  /*display: none;*/
+    width: 100%;
+    text-align: center;
+    display: table;
+    height: 100%;
+}
+
+#loadingTitle h1 {
+    margin: 0.25em;
+    vertical-align: middle;
+    display: table-cell;
 }
