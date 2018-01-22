@@ -5,14 +5,6 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109917224-5"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-109917224-5');
-  </script>
-
-  <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('./sw.js').then(function(registration) {
@@ -28,7 +20,15 @@
     }
   </script>
 
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'UA-109917224-5');
+  </script>
+
+  
   <meta charset="UTF-8">
   <meta name="keywords" content="accessibility">
   <meta name="mobile-web-app-capable" content="yes">

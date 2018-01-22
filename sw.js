@@ -5,16 +5,15 @@ var urlsToCache = [
 ];
 
 self.addEventListener('install', function(event) {
-  // Perform install steps
-  // event.waitUntil(
-  //   caches.open(CACHE_NAME)
-  //     .then(function(cache) {
-  //         caches.delete(CACHE_NAME).then(function() {
-  //         console.log('Opened cache: ', CACHE_NAME, cache.keys());
-  //       });
-  //       return cache.addAll(urlsToCache);
-  //     })
-  // );
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+          // caches.delete(CACHE_NAME).then(function() {
+          console.log('Opened cache: ', CACHE_NAME, cache.keys());
+        // });
+        return cache.addAll(urlsToCache);
+      })
+  );
 });
 
 self.addEventListener('fetch', function(event) {
@@ -50,6 +49,8 @@ self.addEventListener('fetch', function(event) {
             });
           });
         }
+      }, function(reason) {
+        console.log('Featch error with reason ', reason;
       })
     );
 });
