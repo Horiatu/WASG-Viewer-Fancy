@@ -1,20 +1,57 @@
 var CACHE_NAME = 'WCAG-Fancy-cache-v1';
 var urlsToCache = [
-  './',
-  './css/main.css'
+  // './',
+  // './css/main.css'
 ];
 
 self.addEventListener('install', function(event) {
   // Perform install steps
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        // caches.delete(CACHE_NAME).then(function() {
-          console.log('Opened cache: ', CACHE_NAME, cache.keys());
-        // });
-        return cache.addAll(urlsToCache);
+  // event.waitUntil(
+  //   caches.open(CACHE_NAME)
+  //     .then(function(cache) {
+  //         caches.delete(CACHE_NAME).then(function() {
+  //         console.log('Opened cache: ', CACHE_NAME, cache.keys());
+  //       });
+  //       return cache.addAll(urlsToCache);
+  //     })
+  // );
+});
+
+self.addEventListener('fetch', function(event) {
+  // console.log('fetch ',event);
+  event.respondWith(
+    fetch(event.request).then(function(response) {
+      console.log('response status ', response.status);
+      if(response && response.status <= 400) {
+        // console.log('cache');
+        var responseToCache = response.clone();
+
+        caches.open(CACHE_NAME)
+          .then(function(cache) {
+            console.log("Add to Cache: ", response.status, responseToCache);
+
+            cache.put(event.request, responseToCache);
+          });
+        return response;
+        }
+      else 
+        { 
+          // error: get from cache
+          caches.open(CACHE_NAME).then(function(cache) {
+
+            caches.match(event.request).then(function(response) {
+              // Cache hit - return response
+              if (response) {
+                console.log("From Cache: ", response);
+                return response;
+              }
+            }, function(reason) {
+              return null;
+            });
+          });
+        }
       })
-  );
+    );
 });
 
 // self.addEventListener('fetch', function(event) {
