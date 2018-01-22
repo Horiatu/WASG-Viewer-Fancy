@@ -50,7 +50,7 @@ self.addEventListener('fetch', function(event) {
           });
         }
       }, function(reason) {
-        console.log('Featch error with reason ', reason;
+        console.log('Featch error with reason ', reason);
       })
     );
 });
