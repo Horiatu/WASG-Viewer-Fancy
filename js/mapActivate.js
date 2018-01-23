@@ -103,5 +103,4 @@ require([
   });
   mapView.ui.add(scaleBar, "bottom-left");
 
-  // domClass.remove(document.body, "app-loading");
 });
