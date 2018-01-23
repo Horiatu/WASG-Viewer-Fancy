@@ -10,5 +10,5 @@
   ],
   "display": "standalone",
   "background_color": "#f0ffc0",
-  "start_url": "r=1"
+  "start_url": "/?r=1"
 }
