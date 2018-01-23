@@ -6,9 +6,14 @@
       "src": "./images/shortcutsicons/accessibility.192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "./images/shortcutsicons/accessibility.128.png",
+      "type": "image/png",
+      "sizes": "128x128"
     }
   ],
   "display": "standalone",
   "background_color": "#f0ffc0",
-  "start_url": "/?r=1"
+  "start_url": "index.html?r=1"
 }
