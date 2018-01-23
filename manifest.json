@@ -1,6 +1,6 @@
 {
   "short_name": "WCAG",
-  "name": "WCAG Fancy Viewer",
+  "name": "WCAG PWA Viewer",
   "icons": [
     {
       "src": "./images/shortcutsicons/accessibility.192.png",
@@ -8,5 +8,6 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "index.html?launcher=true"
+  "background_color": "#f0ffc0",
+  "start_url": ""
 }
