@@ -62,12 +62,16 @@
   <!-- ArcGIS JS 4 -->
   <link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
   <link rel="stylesheet" href="./css/main.css"/>
-
+  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+  <script>
+    if(responsiveVoice.voiceSupport()) {
+      responsiveVoice.speak('P V A / W C A G viewer');
+    }
+  </script>
 </head>
 
 
 <body class="calcite-maps calcite-nav-top app-loading">
-
     <div class="loading-indicator" role="presentation">
       <div class="loading-message" id="loading_message"></div>
       <div id='loadingTitle'><h1 style="margin:0.25em;">PWA<br/>WCAG<br/>Viewer</h1></div>
@@ -75,7 +79,6 @@
         <div id="splashScreenContent"></div>
       </div>
     </div>
-
 
     <nav class="navbar calcite-navbar navbar-fixed-top calcite-text-light calcite-bg-dark">
     <!-- Menu -->
@@ -225,22 +228,22 @@
   <div class="clearfix"></div>
   <div class="bottom">
     <ul class="details">
-      <li tabindex=0><span class="details fontIcon">&#xe905;</span><span>Details</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe986;</span><span>Search</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("details");' role='button'><span class="details fontIcon">&#xe905;</span><span>Details</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("search");' role='button'><span class="details fontIcon">&#xe986;</span><span>Search</span></li>
       <!-- <li tabindex=0><span class="details fontIcon">&#xea09;</span><span>Help</span></li> -->
       
-      <li tabindex=0><img class="details" src="images/flag.CA.22.png" alt=""><span>Language</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("language");' role='button'><img class="details" src="images/flag.CA.22.png" alt=""><span>Language</span></li>
 
-      <li tabindex=0><span class="details fontIcon">&#xe9ca;</span><span>Overview map</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe916;</span><span>Layer Manager</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe90f;</span><span>Filters</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xea0c;</span><span>Info Panel</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe9cc;</span><span>Reverse Geocode</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe93d;</span><span>Feature List</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe91e;</span><span>Measure</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe931;</span><span>Share</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe902;</span><span>Bookmarks</span></li>
-      <li tabindex=0><span class="details fontIcon">&#xe929;</span><span>Print</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("overview map");' role='button'><span class="details fontIcon">&#xe9ca;</span><span>Overview map</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("layer manager");' role='button'><span class="details fontIcon">&#xe916;</span><span>Layer Manager</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("filters");' role='button'><span class="details fontIcon">&#xe90f;</span><span>Filters</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("info-panel");' role='button'><span class="details fontIcon">&#xea0c;</span><span>Info Panel</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("reverse geo-code");' role='button'><span class="details fontIcon">&#xe9cc;</span><span>Reverse Geocode</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("feature list");' role='button'><span class="details fontIcon">&#xe93d;</span><span>Feature List</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("measure");' role='button'><span class="details fontIcon">&#xe91e;</span><span>Measure</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("share");' role='button'><span class="details fontIcon">&#xe931;</span><span>Share</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("bookmarks");' role='button'><span class="details fontIcon">&#xe902;</span><span>Bookmarks</span></li>
+      <li tabindex=0 onfocus='responsiveVoice.speak("print");' role='button'><span class="details fontIcon">&#xe929;</span><span>Print</span></li>
     </ul>
   </div>
 <!-- </div> -->
